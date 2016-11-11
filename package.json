@@ -1,12 +1,15 @@
 {
   "name": "letter",
   "version": "1.0.0",
-  "description": "We used to write letters, until now.",
+  "description": "write a letters.",
   "main": "index.js",
   "scripts": {
     "start": "webpack -w & nodemon --watch server -e js,html server/start.js",
     "db-init": "./db-init.sh",
     "postinstall": "npm run db-init"
+  },
+  "engines": {
+    "node": "6.7.0"
   },
   "author": "Benjamin Brodsky",
   "license": "ISC",
