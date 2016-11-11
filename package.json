@@ -5,9 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack -w & nodemon --watch server -e js,html server/start.js"
-    /*,*/
-    /*"db-init": "./db-init.sh",*/
-    /*"postinstall": "npm run db-init"*/
   },
   "engines": {
     "node": "6.7.0"
