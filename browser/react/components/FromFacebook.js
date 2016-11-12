@@ -8,7 +8,7 @@ export default class FromFacebook extends Component {
     super(props);
     this.testAPI = this.testAPI.bind(this);
     this.statusChangeCallback = this.statusChangeCallback.bind(this);
-    this.checkLoginState = this.checkLoginState.bind(this);
+    // this.checkLoginState = this.checkLoginState.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
