@@ -85,7 +85,12 @@ export default class FromFacebook extends Component {
 
   render() {
     return (
-      <div><a href="#" onClick={this.handleClick}>Login</a></div>
+      <div>
+        <fb:login-button
+          scope="public_profile,email"
+          onlogin="checkLoginState();">
+        </fb:login-button>
+      </div>
     )
   }
 }
