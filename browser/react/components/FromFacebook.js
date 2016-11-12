@@ -80,7 +80,7 @@ export default class FromFacebook extends Component {
   handleClick() {
     FB.getLoginStatus(function(response) {
       this.statusChangeCallback(response);
-    }.bind(this));
+    });
   }
 
   render() {
