@@ -86,10 +86,8 @@ export default class FromFacebook extends Component {
   render() {
     return (
       <div>
-        <fb:login-button
-          scope="public_profile,email"
-          onlogin="checkLoginState();">
-        </fb:login-button>
+        <div className="fb-login-button" data-size="medium" data-auto-logout-link="true" data-onlogin="checkLoginState();"></div>
+
       </div>
     )
   }
