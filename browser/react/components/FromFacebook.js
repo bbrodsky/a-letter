@@ -82,7 +82,7 @@ export default class FromFacebook extends Component {
   }
 
   handleClick() {
-    FB.login(this.checkLoginState());
+    FB.login(this.props.checkLoginState());
   }
 
   render() {
