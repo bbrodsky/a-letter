@@ -6,10 +6,10 @@ export default class FromFacebook extends Component {
   // http://stackoverflow.com/questions/27717555/implement-facebook-api-login-with-reactjs
   constructor (props) {
     super(props);
-    this.testAPI = this.testAPI.bind(this);
-    this.statusChangeCallback = this.statusChangeCallback.bind(this);
-    this.checkLoginState = this.checkLoginState.bind(this);
-    this.handleClick = this.handleClick.bind(this);
+    // this.testAPI = this.testAPI.bind(this);
+    // this.statusChangeCallback = this.statusChangeCallback.bind(this);
+    // this.checkLoginState = this.checkLoginState.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
@@ -82,7 +82,7 @@ export default class FromFacebook extends Component {
   }
 
   handleClick() {
-    FB.login(checkLoginState());
+    FB.login(this.checkLoginState());
   }
 
   render() {
