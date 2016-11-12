@@ -75,14 +75,12 @@ export default class FromFacebook extends Component {
   // This function is called when someone finishes with the Login
   // Button.  See the onlogin handler attached to it in the sample
   // code below.
-  checkLoginState() {
+
+
+  handleClick() {
     FB.getLoginStatus(function(response) {
       this.statusChangeCallback(response);
     }.bind(this));
-  }
-
-  handleClick() {
-    FB.login(this.checkLoginState());
   }
 
   render() {
