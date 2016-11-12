@@ -3,6 +3,7 @@
 var path = require('path');
 var express = require('express');
 var favicon = require('serve-favicon');
+var passport = require('passport')
 
 module.exports = function (app) {
 
@@ -16,5 +17,9 @@ module.exports = function (app) {
   app.use(express.static(npmPath));
   app.use(express.static(publicPath));
   app.use(express.static(browserPath));
+  app.use('/bootstrap', express.static(npmPath + '/bootstrap/dist'));
+  app.use('/jquery', express.static(npmPath + '/jquery/dist'))
+
+
 
 };

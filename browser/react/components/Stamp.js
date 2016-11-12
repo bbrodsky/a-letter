@@ -5,7 +5,7 @@ export default class Stamp extends Component {
   render(){
     return(
       <div>
-        Stamp
+        <img src="/stamps/908.jpg" height="150px" />
       </div>
     )
   }

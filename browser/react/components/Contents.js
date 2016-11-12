@@ -1,13 +1,21 @@
 import React, { Component } from 'react';
 // import { fromChange } from '../actions/from-action';
 
-export default class From extends Component {
+import TextField from 'material-ui/TextField'
+
+
+export default class Contents extends Component {
 
   render(){
     return(
-      <div>
-        <input className="form-control" type="text" value="" id="contents-field-input" onChange="" />
-      </div>
+        <TextField
+          hintText="Contents"
+          multiLine={true}
+          fullWidth={true}
+          underlineShow={false}
+          // rows={2}
+          // rowsMax={4}
+        />
     )
   }
 }
