@@ -15,14 +15,16 @@ const styles = {
   },
   slide: {
     padding: 10,
+    textAlign: "center"
   },
 };
 
 const tabStyle = {
-  backgroundColor: "black"
+  backgroundColor: "#ECEFF1",
+  color: "#546E7A"
 }
 const tabLine = {
-  background:"white"
+  background:"black"
 }
 
 export default class From extends Component {
@@ -32,6 +34,7 @@ export default class From extends Component {
       slideIndex: 0,
     };
     this.handleChange = this.handleChange.bind(this);
+    this.setFromField = this.setFromField.bind(this);
 
   }
 
@@ -40,6 +43,10 @@ export default class From extends Component {
       slideIndex: value,
     });
   };
+
+  setFromField(e) {
+    this.props.onFromChange(e.target.value);
+  }
 
   render(){
     return(
@@ -72,11 +79,12 @@ export default class From extends Component {
           <div>
             <div>
               <input
+                style={{textAlign:"center"}}
                 className="form-control"
                 type="text"
-                value=""
+                value={this.props.From}
                 id="from-field-input"
-                onChange="fromChange" />
+                onChange={this.setFromField} />
             </div>
           </div>
           <div style={styles.slide}>

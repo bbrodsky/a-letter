@@ -1,19 +1,30 @@
 import React, { Component } from 'react';
 import { toFieldChange } from '../actions/to-action';
+import TextField from 'material-ui/TextField';
 
 
 export default class To extends Component {
+  constructor(props) {
+    super(props);
+    this.toChange = this.toChange.bind(this);
+  }
+  toChange(e){
+    this.props.onToChange(e.target.value);
+  }
 
   render(){
     return(
       <div>
-        <label htmlFor="to-field-input" className="col-form-label">Destination: </label>
-        <input
-          className="form-control"
-          type="text"
-          value=""
-          id="to-field-input"
-          onChange="toFieldChange" />
+        <TextField
+          hintText="To"
+          style={{textColor:'black',fontFamily: 'Over the Rainbow'}}
+          floatingLabelText="Who is this letter addressed to?"
+          value={this.props.To}
+          onChange={this.toChange}
+          multiLine={true}
+          rows={2}
+          rowsMax={2}
+        />
       </div>
     )
   }

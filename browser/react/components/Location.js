@@ -5,14 +5,13 @@ export default class Location extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      Location: ''
+      Location: 'Location'
     };
   }
 
   componentDidMount(){
     var options = {
       enableHighAccuracy: true,
-      // timeout: 5000,
       maximumAge: 0
     };
 
@@ -45,13 +44,6 @@ export default class Location extends Component {
 
     return(
       <div>
-        <label htmlFor="location-field-input" className="col-form-label">Location: </label>
-        <input
-          className="form-control"
-          type="text"
-          value=""
-          id="location-field-input"
-          onChange="locationSet" />
         <div key="location">
           {this.state.Location}
         </div>

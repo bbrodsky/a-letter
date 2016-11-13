@@ -6,6 +6,8 @@ var request = require('request');
 var passport = require('passport')
   , TwitterStrategy = require('passport-twitter').Strategy;
 
+var Letter = require('../db/models')
+
 
 module.exports = app;
 
@@ -40,6 +42,17 @@ app.get('/location', (req,res) => {
     res.send(response.body);
   })
 })
+
+app.post('/send', function (req, res, next) {
+  Letter.create(req.body)
+  .then(function (story) {
+    return story;
+  })
+  .then(function (story) {
+    res.status(201).json(story);
+  })
+  .catch(next);
+});
 
 app.get('/*', function (req, res) {
     res.sendFile(app.get('indexHTMLPath'));

@@ -4,7 +4,7 @@ import From from '../containers/FromContainer';
 import Stamp from '../containers/StampContainer';
 import Location from '../containers/LocationContainer';
 import Contents from '../containers/ContentsContainer';
-// import {Send} from '../containers/SendContainer';
+import Send from '../containers/SendContainer';
 
 import Paper from 'material-ui/Paper';
 
@@ -54,7 +54,8 @@ export class Letter extends Component {
         <Paper zDepth={3} style={contentsStyle}>
           <Contents />
         </Paper>
-
+        <hr />
+        <Send />
       </div>
     )
   }

@@ -1,12 +1,18 @@
-// import { connect } from 'react-redux';
-// import Send from '../components/Send';
-//
-// const mapStateToProps = function (state) {
-//   return {
-//     Stamp: state.stamp
-//   };
-// };
-//
-// const statefulComponentCreator = connect(mapStateToProps);
-// const StampContainer = statefulComponentCreator(Stamp);
-// export default StampContainer;
+import { connect } from 'react-redux';
+import Send from '../components/Send';
+import { saveAndSendLetter } from '../actions/send-action';
+
+
+const mapStateToProps = function (state) {
+  return {
+    Send: state.Send
+  };
+};
+
+const mapDispatchToProps = (dispatch) => ({
+  onSend: (letter) => dispatch(saveAndSendLetter(letter))
+})
+
+const statefulComponentCreator = connect(mapStateToProps,mapDispatchToProps);
+const SendContainer = statefulComponentCreator(Send);
+export default SendContainer;

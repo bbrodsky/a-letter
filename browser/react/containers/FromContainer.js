@@ -1,12 +1,17 @@
 import { connect } from 'react-redux';
 import From from '../components/From';
+import { fromFieldChange } from '../actions/from-action';
 
 const mapStateToProps = function (state) {
   return {
-    From: state.from
+    From: state.From
   };
 };
 
-const statefulComponentCreator = connect(mapStateToProps);
+const mapDispatchToProps = (dispatch) => ({
+  onFromChange: from => dispatch(fromFieldChange(from))
+})
+
+const statefulComponentCreator = connect(mapStateToProps,mapDispatchToProps);
 const FromContainer = statefulComponentCreator(From);
 export default FromContainer;
