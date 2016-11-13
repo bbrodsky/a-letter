@@ -1,34 +1,34 @@
 import { combineReducers } from 'redux';
 
-const To = (state = "", action) => {
+const to = (state = "", action) => {
   switch (action.type) {
     case "SET_TO_FIELD":
       return action.to;
     default: return state;
   }
 }
-const From = (state = "", action) => {
+const from = (state = "", action) => {
   switch (action.type) {
     case "SET_FROM_FIELD":
       return action.from;
     default: return state;
   }
 }
-const Stamp = (state = "1930s-1.png", action) => {
+const stamp = (state = "1930s-1.png", action) => {
   switch (action.type) {
     case "SET_STAMP":
       return action.stamp;
     default: return state;
   }
 }
-const Location = (state = "", action) => {
+const location = (state = "", action) => {
   switch (action.type) {
     case "SET_LOCATION_FIELD":
       return action.location;
     default: return state;
   }
 }
-const Contents = (state = "", action) => {
+const contents = (state = "", action) => {
   switch (action.type) {
     case "SET_CONTENTS_FIELD":
       return action.contents;
@@ -45,12 +45,11 @@ const Send = (state = "", action) => {
 }
 
 const rootReducer = combineReducers({
-  To,
-  From,
-  Stamp,
-  Location,
-  Contents,
-  Send
+  to,
+  from,
+  stamp,
+  location,
+  contents
 });
 
 export default rootReducer;

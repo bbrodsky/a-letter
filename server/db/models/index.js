@@ -2,23 +2,23 @@ const db = require('../db');
 const DataTypes = db.Sequelize;
 
 module.exports = db.define('letters', {
-  To: {
+  to: {
     type: DataTypes.STRING(), // eslint-disable-line new-cap
     allowNull: false
   },
-  From: {
+  from: {
     type: DataTypes.STRING(), // eslint-disable-line new-cap
     allowNull: true
   },
-  Location: {
+  location: {
     type: DataTypes.STRING(), // eslint-disable-line new-cap
     allowNull: false
   },
-  Contents: {
+  contents: {
     type: DataTypes.TEXT(), // eslint-disable-line new-cap
     allowNull: false
   },
-  Stamp: {
+  stamp: {
     type: DataTypes.TEXT(),
     allowNull:false
   }

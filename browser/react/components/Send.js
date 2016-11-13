@@ -14,7 +14,6 @@ export default class Send extends Component {
     return (
       <div>
         <RaisedButton label="Send Letter" fullWidth={true} onClick={()=>this.onSubmit()} />
-        {/* <button label="Send Letter"  /> */}
       </div>
     )
   }
