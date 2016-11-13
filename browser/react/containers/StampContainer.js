@@ -4,7 +4,7 @@ import { stampSet } from '../actions/stamp-action';
 
 const mapStateToProps = function (state) {
   return {
-    Stamp: state.stamp
+    stamp: state.stamp
   };
 };
 
