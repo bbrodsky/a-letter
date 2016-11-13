@@ -4,7 +4,7 @@ import { fromFieldChange } from '../actions/from-action';
 
 const mapStateToProps = function (state) {
   return {
-    From: state.from
+    from: state.from
   };
 };
 

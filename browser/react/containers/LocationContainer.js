@@ -4,7 +4,7 @@ import { locationSet } from '../actions/location-action';
 
 const mapStateToProps = function (state) {
   return {
-    Location: state.location
+    location: state.location
   };
 };
 

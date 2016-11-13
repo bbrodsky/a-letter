@@ -19,7 +19,7 @@ export default class To extends Component {
           hintText="To"
           style={{textColor:'black',fontFamily: 'Over the Rainbow'}}
           floatingLabelText="Who is this letter addressed to?"
-          value={this.props.To}
+          value={this.props.to}
           onChange={this.toChange}
           multiLine={true}
           rows={2}

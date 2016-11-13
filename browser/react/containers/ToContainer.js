@@ -4,7 +4,7 @@ import { toFieldChange } from '../actions/to-action';
 
 const mapStateToProps = function (state) {
   return {
-    To: state.to
+    to: state.to
   };
 };
 

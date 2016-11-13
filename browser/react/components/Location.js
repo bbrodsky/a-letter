@@ -2,13 +2,6 @@ import React, { Component } from 'react';
 
 
 export default class Location extends Component {
-  constructor (props) {
-    super(props);
-    this.state = {
-      Location: 'Location'
-    };
-  }
-
   componentDidMount(){
     var options = {
       enableHighAccuracy: true,
@@ -17,7 +10,6 @@ export default class Location extends Component {
 
     const success = (pos) => {
       var crd = pos.coords;
-      this.setState({Location: 'Latitude : ' + crd.latitude + ' / Longitude: ' + crd.longitude})
       this.props.go('Latitude : ' + crd.latitude + ' / Longitude: ' + crd.longitude);
     };
 
@@ -45,7 +37,7 @@ export default class Location extends Component {
     return(
       <div>
         <div key="location">
-          {this.state.Location}
+          {this.props.location}
         </div>
       </div>
     )

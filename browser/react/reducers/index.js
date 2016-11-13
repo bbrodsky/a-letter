@@ -21,7 +21,7 @@ const stamp = (state = "1930s-1.png", action) => {
     default: return state;
   }
 }
-const location = (state = "", action) => {
+const location = (state = "Location", action) => {
   switch (action.type) {
     case "SET_LOCATION_FIELD":
       return action.location;

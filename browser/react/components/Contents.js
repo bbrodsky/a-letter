@@ -22,7 +22,7 @@ export default class Contents extends Component {
           fullWidth={true}
           underlineShow={false}
           rows={2}
-          value={this.props.Contents}
+          value={this.props.contents}
           onChange={this.contentsChange}
           // rowsMax={4}
         />

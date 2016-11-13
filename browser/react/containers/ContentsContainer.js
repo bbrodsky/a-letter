@@ -4,7 +4,7 @@ import { contentsFieldChange } from '../actions/contents-action';
 
 const mapStateToProps = function (state) {
   return {
-    Contents: state.contents
+    contents: state.contents
   };
 };
 

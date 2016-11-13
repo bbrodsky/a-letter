@@ -82,7 +82,7 @@ export default class From extends Component {
                 style={{textAlign:"center"}}
                 className="form-control"
                 type="text"
-                value={this.props.From}
+                value={this.props.from}
                 id="from-field-input"
                 onChange={this.setFromField} />
             </div>
