@@ -63,7 +63,7 @@ export default class Stamp extends Component {
 
     return (
       <div>
-        <img src={"/stamps/" + this.props.Stamp} height="150px" />
+        <img src={"/stamps/" + this.props.stamp} height="150px" />
         <br />
         <RaisedButton label="Change Stamp" onTouchTap={this.handleOpen} />
         <Dialog
