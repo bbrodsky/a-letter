@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
+import store from '../store';
+
 
 const to = (state = "", action) => {
   switch (action.type) {
@@ -36,10 +38,10 @@ const contents = (state = "", action) => {
   }
 }
 
-const Send = (state = "", action) => {
+const id = (state = "", action) => {
   switch (action.type) {
     case "SEND_LETTER":
-      return action.send;
+      return action.id;
     default: return state;
   }
 }
@@ -49,7 +51,8 @@ const rootReducer = combineReducers({
   from,
   stamp,
   location,
-  contents
+  contents,
+  id
 });
 
 export default rootReducer;

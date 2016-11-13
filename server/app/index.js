@@ -37,6 +37,13 @@ app.use(function (req, res, next) {
 
 });
 
+app.get('/api/:id' , (req,res) => {
+  Letter.findOne({
+    where: req.params
+  })
+  .then(letter => res.json(letter))
+})
+
 app.get('/location', (req,res) => {
   request('http://freegeoip.net/json/' + req.connection.remoteAddress, (error, response, body) => {
     res.send(response.body);
@@ -53,6 +60,11 @@ app.post('/send', function (req, res, next) {
   })
   .catch(next);
 });
+
+app.get('/:id',function(req,res) {
+  res.sendFile(app.get('letterHTMLPath'));
+})
+
 
 app.get('/*', function (req, res) {
     res.sendFile(app.get('indexHTMLPath'));

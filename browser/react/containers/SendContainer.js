@@ -5,7 +5,7 @@ import { saveAndSendLetter } from '../actions/send-action';
 
 const mapStateToProps = function (state) {
   return {
-    Send: state.send
+    id: state.id
   };
 };
 

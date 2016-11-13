@@ -1,10 +1,11 @@
-var webpack = require('webpack');
-
 module.exports = {
-  entry: './browser/react/index.js',
+  entry: {
+      app: "./browser/react/index.js",
+      displayLetter: "./browser/display-letter-react/index.js"
+  },
   output: {
     path: __dirname,
-    filename: './public/bundle.js'
+    filename: './public/[name].bundle.js'
   },
   context: __dirname,
   devtool: 'source-map',
