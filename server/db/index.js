@@ -8,7 +8,7 @@ require('./models');
 
 // Syncing all the models at once. This promise is used by main.js.
 var syncedDbPromise = db.sync(
-  // {force:true}
+  {force:true}
 );
 
 syncedDbPromise.then(function () {

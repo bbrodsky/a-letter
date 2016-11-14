@@ -24445,10 +24445,10 @@
 	          style: { textColor: 'black', fontFamily: 'Quintessential' },
 	          floatingLabelText: 'Who is this letter addressed to?',
 	          value: this.props.to,
-	          onChange: this.toChange,
-	          multiLine: true,
-	          rows: 2,
-	          rowsMax: 2
+	          onChange: this.toChange
+	          // multiLine={true}
+	          // rows={2}
+	          // rowsMax={2}
 	        })
 	      );
 	    }
