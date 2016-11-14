@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import FromTwitter from './FromTwitter'
-import FromFacebook from './FromFacebook'
-
 
 const styles = {
   headline: {
@@ -27,7 +24,6 @@ const tabLine = {
 export default class From extends Component {
   constructor(props) {
     super(props);
-
   }
 
 

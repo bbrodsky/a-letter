@@ -6,7 +6,6 @@ export default class Contents extends Component {
   constructor(props) {
     super(props);
   }
-
   render(){
     return(
       <div className="contents">
@@ -15,8 +14,3 @@ export default class Contents extends Component {
     )
   }
 }
-// const blocks = convertFromRaw(rawContent);
-//
-// this.state = {
-//   editorState: EditorState.createWithContent(blocks, decorator),
-// };

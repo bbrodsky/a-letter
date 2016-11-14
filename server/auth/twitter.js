@@ -5,8 +5,8 @@ const TwitterStrategy = require('passport-twitter').Strategy;
 module.exports = router;
 
 passport.use(new TwitterStrategy({
-    consumerKey: 'VoVBBZDfGAKkxDThOPP8VdH3L',
-    consumerSecret: 'Ho7emXdX3TMNGr4272dHOUmlC9bdYPTkI7FFJCdrexjwmDr17T',
+    consumerKey: '',
+    consumerSecret: '',
     callbackURL: "/"
   }
   ,
