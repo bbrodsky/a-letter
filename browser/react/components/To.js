@@ -17,7 +17,7 @@ export default class To extends Component {
       <div>
         <TextField
           hintText="To"
-          style={{textColor:'black',fontFamily: 'Over the Rainbow'}}
+          style={{textColor:'black',fontFamily: 'Quintessential'}}
           floatingLabelText="Who is this letter addressed to?"
           value={this.props.to}
           onChange={this.toChange}

@@ -10,7 +10,7 @@ export default class Location extends Component {
 
     const success = (pos) => {
       var crd = pos.coords;
-      this.props.go('Latitude : ' + crd.latitude + ' / Longitude: ' + crd.longitude);
+      this.props.go('Latitude : ' + Math.round(crd.latitude * 1000) / 1000 + ' / Longitude: ' + Math.round(crd.longitude * 1000) / 1000);
     };
 
     function error(err) {

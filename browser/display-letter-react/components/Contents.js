@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Editor, ContentState, EditorState, convertFromRaw} from 'draft-js';
+
 
 export default class Contents extends Component {
   constructor(props) {
@@ -7,9 +9,14 @@ export default class Contents extends Component {
 
   render(){
     return(
-      <p>
-        {this.props.value}
-      </p>
+      <div className="contents">
+        <Editor editorState={this.props.value} readOnly={true} />
+      </div>
     )
   }
 }
+// const blocks = convertFromRaw(rawContent);
+//
+// this.state = {
+//   editorState: EditorState.createWithContent(blocks, decorator),
+// };

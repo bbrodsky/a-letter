@@ -15,7 +15,7 @@ module.exports = db.define('letters', {
     allowNull: false
   },
   contents: {
-    type: DataTypes.TEXT(), // eslint-disable-line new-cap
+    type: DataTypes.JSON(),
     allowNull: false
   },
   stamp: {

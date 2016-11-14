@@ -1,3 +1,11 @@
 body {
     background-color: #f1e9d2;
+    margin-bottom: 150px;
+}
+
+.contents {
+  height:500px;
+  padding:20px;
+  font-family: 'Quintessential';
+  font-size: 35px;
 }

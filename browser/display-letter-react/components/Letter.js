@@ -6,20 +6,27 @@ import Location from '../components/Location';
 import Contents from '../components/Contents';
 
 import Paper from 'material-ui/Paper';
+import {EditorState, convertFromRaw} from 'draft-js';
 
-let letterObject = {};
 
 export class Letter extends Component {
   constructor (props) {
     super(props);
     this.state = {
-      letter: {}
+      letter: {
+        to: "",
+        contents: EditorState.createEmpty()
+      }
     }
   }
   componentDidMount () {
     fetch(`/api/${this.props.id}`)
       .then(res => res.json())
-      .then(letterObj => this.setState({letter: letterObj}));
+      .then(letterObj => {
+        letterObj.contents = EditorState.createWithContent(convertFromRaw(letterObj.contents))
+        this.setState({letter:letterObj});
+        console.log("after",this.state)
+      });
     }
     // let location_ip = '';
     // Promise
@@ -32,9 +39,6 @@ export class Letter extends Component {
     //     console.log("IP",location_ip)
     //   });
   render() {
-    //
-    //  api request /api/id
-    //
 
     const bodyStyle = {
       padding: 10
