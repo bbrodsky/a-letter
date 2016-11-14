@@ -9,3 +9,15 @@ body {
   font-family: 'Quintessential';
   font-size: 35px;
 }
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+    font-family: 'Quintessential';
+    font-size: 40px;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
