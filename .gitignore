@@ -1,7 +1,7 @@
 node_modules
 .DS_Store
-/public/app.bundle.js
-/public/displayLetter.bundle.js
-/public/app.bundle.js.map
-/public/displayLetter.bundle.js.map
+public/app.bundle.js
+public/displayLetter.bundle.js
+public/app.bundle.js.map
+public/displayLetter.bundle.js.map
 /bin
