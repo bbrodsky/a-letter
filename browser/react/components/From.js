@@ -88,10 +88,12 @@ export default class From extends Component {
             </div>
           </div>
           <div style={styles.slide}>
-            <FromFacebook />
+            Coming Soon.
+            {/* <FromFacebook /> */}
           </div>
           <div style={styles.slide}>
-            <FromTwitter />
+            Coming Soon.
+            {/* <FromTwitter /> */}
           </div>
         </SwipeableViews>
       </div>

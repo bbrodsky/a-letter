@@ -13,9 +13,7 @@ export class Letter extends Component {
     const bodyStyle = {
       padding: 10
     }
-    const envelStyle = {
-      padding:30
-    }
+
     const contentsStyle = {
       paddingLeft:20,
       paddingRight:20
@@ -28,7 +26,7 @@ export class Letter extends Component {
     }
     return (
       <div style={bodyStyle}>
-        <Paper zDepth={2} style={envelStyle}>
+        <Paper zDepth={2} id="envel">
           <div className="row">
             <div className="col-md-4">
               <From />

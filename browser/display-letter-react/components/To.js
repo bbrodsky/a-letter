@@ -1,17 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 
 
-export default class To extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render(){
-    return(
-      <div>
-        {this.props.value}
-      </div>
-    )
-  }
-}
+export default ({value}) => (
+  <div id="to">
+    {value}
+  </div>
+)

@@ -21,3 +21,35 @@ body {
 .navbar .navbar-collapse {
   text-align: center;
 }
+
+#envel {
+  padding: 30px
+}
+
+#bodyStyle {
+  padding: 10px
+}
+
+#contents {
+  padding-left:20px;
+  padding-right:20px;
+}
+
+#to  {
+  text-color: 'black';
+  font-family: 'Quintessential';
+  text-align: center;
+  font-size: 25px;
+}
+
+#from {
+  text-align: left;
+}
+
+.stamp = {
+  text-align: right;
+}
+
+#thirdRow {
+  height: 150px;
+}

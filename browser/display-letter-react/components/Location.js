@@ -1,17 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-
-export default class Location extends Component {
-  constructor (props) {
-    super(props);
-  }
-  render(){
-    return(
-      <div>
-        <div key="location">
-          {this.props.value}
-        </div>
-      </div>
-    )
-  }
-}
+export default ({value}) => (
+  <div>
+    <div key="location">
+      {value}
+    </div>
+  </div>
+)

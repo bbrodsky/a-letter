@@ -39,6 +39,7 @@ app.use(function (req, res, next) {
 // app.use(passport.session());
 // app.use('/auth', require('../auth'));
 
+
 app.get('/api/:id' , (req,res) => {
   Letter.findOne({
     where: req.params
@@ -63,8 +64,18 @@ app.post('/send', function (req, res, next) {
   .catch(next);
 });
 
-app.get('/:id',function(req,res) {
-  res.sendFile(app.get('letterHTMLPath'));
+app.get('/:id',function(req,res, next) {
+  Letter.findById(req.params.id)
+  .then( (id) => {
+    if (!id) {
+      const err = Error('Letter not found');
+      err.status = 404;
+      throw err
+    } else {
+      res.sendFile(app.get('letterHTMLPath'));
+    }
+  })
+  .catch(next);
 })
 
 

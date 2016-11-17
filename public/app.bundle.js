@@ -24276,9 +24276,7 @@
 	      var bodyStyle = {
 	        padding: 10
 	      };
-	      var envelStyle = {
-	        padding: 30
-	      };
+	
 	      var contentsStyle = {
 	        paddingLeft: 20,
 	        paddingRight: 20
@@ -24294,7 +24292,7 @@
 	        { style: bodyStyle },
 	        _react2.default.createElement(
 	          _Paper2.default,
-	          { zDepth: 2, style: envelStyle },
+	          { zDepth: 2, id: 'envel' },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'row' },
@@ -28241,12 +28239,12 @@
 	          _react2.default.createElement(
 	            'div',
 	            { style: styles.slide },
-	            _react2.default.createElement(_FromFacebook2.default, null)
+	            'Coming Soon.'
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { style: styles.slide },
-	            _react2.default.createElement(_FromTwitter2.default, null)
+	            'Coming Soon.'
 	          )
 	        )
 	      );

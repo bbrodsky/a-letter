@@ -14,7 +14,6 @@ export class Letter extends Component {
     super(props);
     this.state = {
       letter: {
-        to: "",
         contents: EditorState.createEmpty()
       }
     }
@@ -25,7 +24,6 @@ export class Letter extends Component {
       .then(letterObj => {
         letterObj.contents = EditorState.createWithContent(convertFromRaw(letterObj.contents))
         this.setState({letter:letterObj});
-        console.log("after",this.state)
       });
     }
     // let location_ip = '';
@@ -39,12 +37,8 @@ export class Letter extends Component {
     //     console.log("IP",location_ip)
     //   });
   render() {
-
     const bodyStyle = {
       padding: 10
-    }
-    const envelStyle = {
-      padding:30
     }
     const contentsStyle = {
       paddingLeft:20,
@@ -58,7 +52,7 @@ export class Letter extends Component {
     }
     return (
       <div style={bodyStyle}>
-        <Paper zDepth={2} style={envelStyle}>
+        <Paper zDepth={2} id="envel">
           <div className="row">
             <div className="col-md-4">
               <From value={this.state.letter.from} />
